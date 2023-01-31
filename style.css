@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2? family= Poppins:wght@400;600 & display=swap");
+
+:root {
+  --green-color: #04ddb2;
+  --black-color: #333;
+  --grey-color: #767676;
+
+  --font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 800px 300px;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+}
+
+header {
+  grid-area: header;
+  background-color: brown;
+
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo links button";
+}
+
+#logo {
+  grid-area: logo;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: transparent;
+}
+.layout-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#header-links{
+    grid-area: links;
+}
+
+#header-links > a{
+    font-family: var(--font-family);
+    color: var(--grey-color);
+    text-decoration: none;
+}
+
+#header-button{
+    grid-area: button;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#download-button{
+    background-color: var(--green-color);
+    border-radius: 20px;
+    color: white;
+    padding: 11px;
+    border: solid var(--green-color);
+    cursor: pointer;
+}
+
+main {
+  grid-area: main;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+#lobe-tour{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+#title-lobe-tour{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 50px;
+
+    margin: 0;
+
+}
+
+#description-lobe-tour{
+    font-family: var(--font-family);
+    font-size: medium;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.container-video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey-color);
+    margin-left: 350px;
+    margin-right: 350px;
+    border-radius: 2%;
+}
+
+#video{
+    width: 80%;
+    height: 90%;
+}
+
+footer {
+  grid-area: footer;
+  background-color: chartreuse;
+}
